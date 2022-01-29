@@ -11,7 +11,7 @@
             ul#menu li {
                 display:inline;
             }
-        </style>
+    </style>
   </head>
   <body>
     <ul id="menu">
@@ -44,22 +44,38 @@
         </tr>
       </tfoot>
     </table>
-    <form method="get" autocomplete="off">
-      <input type="email" name="email" required placeholder="qwerty@gmail.com"/>
-      <input type="date" name="date" required/>
-      <input type="text" name="login" autocomplete="on" required placeholder="name" maxlength="20"/>
-      <input type="password" name="password" required placeholder="password"/>
-      <button type="submit" formmethod="get" formaction="login.php">Отправить</button>
-			<button type="reset">Отмена</button>
-    </form>
-    <form method="get">
-           <input list="phonesList" type="text" name="model" placeholder="Введите модель" />
-           <button type="submit" formaction="login.php">Отправить</button>
-    </form>
-    <datalist id="phonesList">
-      <option value="iPhone 6S" label="62000"/>
-      <option value="Lumia 950">35000</option>
-      <option value="Nexus 5X" label="49000"/>
-    </datalist>
+        <form method="get" autocomplete="off">
+          <h3><b>Введите свои данные по которым мы с вами свяжемся</b></h3>
+            <p><label for="email">Email:</label>
+            <input type="email" id="email"name="email" autocomplete="on" required placeholder="user@gmail.com"/></p>
+            <p><label for="date">Date:</label>
+            <input type="date" id="date" name="date" required/></p>
+            <p><label for="login">Login:</label>
+            <input type="text" id="login" name="login" autocomplete="on" required placeholder="name" maxlength="20"/></p>
+            <p><label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="password"/></p>
+            <label for="phone">Telephone: </label>
+            <input type="tel" placeholder="(XXX)-XXX-XXXX" id="phone" name="phone"/>
+            <h4>Подтвердите свой возраст</h4>
+            <label for="age">Возраст: </label>
+            <input type="number" step="1" min="14" max="100" value="14" id="age" name="age"/>
+            <h4>Укажите пол</h4>
+         		<input type="radio" value="man" checked name="gender" required/>мужской
+         		<input type="radio" value="woman" name="gender" required/>женский
+            <h2>Изучаемые технологии</h2>
+            <p><input type="checkbox" checked name="html5"/>HTML5</p>
+            <p><input type="checkbox" name="dotnet"/>.NET</p>
+            <p><input type="checkbox" name="java"/>Java</p>
+            <p><input type="checkbox" name="none"/>Без опыта роботы</p>
+            <h4>Выберите модель из списка которую хотите</h4>
+            <input list="phonesList" type="text" name="model" placeholder="Введите модель"/>
+            <button type="submit" formaction="login.php">Заказать</button>
+            <button type="reset">Отмена</button>
+        </form>
+        <datalist id="phonesList">
+          <option value="iPhone 6S" label="62000"/>
+          <option value="Lumia 950">35000</option>
+          <option value="Nexus 5X" label="49000"/>
+        </datalist>
   </body>
 </html>
