@@ -5,7 +5,7 @@
     <title>Ведро номер два</title>
     <meta name="keywords" content="мой сайт, html_project_one, Моё хранилище">
     <meta name="description" content="Сайт для тренеровки">
-    <base href="https://github.com/andreuyge/html_project_one.git">
+    <!--<base href="https://github.com/andreuyge/html_project_one.git">-->
     <link rel="shortcut icon" href="C:\Users\bogmo\Desktop\html_codes\ad.jfif"/>
     <style>
             ul#menu li {
@@ -44,16 +44,16 @@
         </tr>
       </tfoot>
     </table>
-        <form method="get" autocomplete="off">
+        <form method="post" action="#" autocomplete="off">
           <h3><b>Введите свои данные по которым мы с вами свяжемся</b></h3>
             <p><label for="email">Email:</label>
-            <input type="email" id="email"name="email" autocomplete="on" required placeholder="user@gmail.com"/></p>
+            <input type="email" id="email"name="email" autocomplete="on" pattern="[a-zA-Z0-9.]{6,}@[a-zA-Z]+\.[a-zA-Z]+" required placeholder="user@gmail.com"/></p>
             <p><label for="date">Date:</label>
-            <input type="date" id="date" name="date" required/></p>
+            <input type="date" id="date" name="date" /></p>
             <p><label for="login">Login:</label>
-            <input type="text" id="login" name="login" autocomplete="on" required placeholder="name" maxlength="20"/></p>
+            <input type="text" id="login" name="login" autocomplete="on"  placeholder="name" maxlength="20"/></p>
             <p><label for="password">Password:</label>
-            <input type="password" id="password" name="password" required placeholder="password"/></p>
+            <input type="password" id="password" name="password"  placeholder="password"/></p>
             <label for="phone">Telephone: </label>
             <input type="tel" placeholder="(XXX)-XXX-XXXX" id="phone" name="phone"/>
             <h4>Подтвердите свой возраст</h4>
@@ -69,7 +69,7 @@
             <p><input type="checkbox" name="none"/>Без опыта роботы</p>
             <h4>Выберите модель из списка которую хотите</h4>
             <input list="phonesList" type="text" name="model" placeholder="Введите модель"/>
-            <button type="submit" formaction="login.php">Заказать</button>
+            <button type="submit">Заказать</button>
             <button type="reset">Отмена</button>
         </form>
         <datalist id="phonesList">
